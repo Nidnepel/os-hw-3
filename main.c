@@ -1,33 +1,33 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int fibo(int num) {
+int Fib(int num) {
     if (num == 1) {
         return 0;
     } else if (num == 2) {
         return 1;
     } else {
-        return fibo(num - 1) + fibo(num - 2);
+        return Fib(num - 1) + Fib(num - 2);
     }
 }
 
-int factorial(int num) {
+int Fact(int num) {
     if (num == 1) {
         return 1;
     } else {
-        return factorial(num - 1) * num;
+        return Fact(num - 1) * num;
     }
 }
 
 int main(int argc, char *argv[]){
      pid_t chpid = 0;
      int num;
-     sscanf(*(argv + 1), "%d", &num);
+     sscanf(argv[1], "%d", &num);
      chpid = fork();
      if (chpid == 0) {
-             printf("i am son, this is factorial: %d \n", factorial(num));
+             printf("child - Fact: %d \n", Fact(num));
      } else {
-        printf("i am father, this is fibo: %d \n", fibo(num));
+        printf("parent - Fib: %d \n", Fib(num));
      }
      return 0;
 }

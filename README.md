@@ -1,10 +1,9 @@
-# Мовшин Максим | БПИ213 | ДЗ-3
-команда для запуска: `gcc main.c -o res && ./res <число>`
+# Лепендин Дмитрий | БПИ218 | ДЗ-3 
+запуск: `gcc main.c -o out && ./out 5`
 например:
 ```
-gcc main.c -o res && ./res 12
-```
-```
-> i am father, this is fibo: 89 
-> i am son, this is factorial: 479001600
+gcc main.c -o out && ./out 5
+
+parent - Fib: 3
+child - Fact: 120                                        
 ```
